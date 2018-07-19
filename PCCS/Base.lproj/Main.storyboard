@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hYf-AY-3Jq">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="DINPro-Bold.otf">
+            <string>DINPro-Bold</string>
+        </array>
+        <array key="DINPro-Medium.otf">
+            <string>DINPro-Medium</string>
+        </array>
+        <array key="DINPro-Regular.otf">
+            <string>DINPro-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="drw-NU-Bqu">
+            <objects>
+                <navigationController id="hYf-AY-3Jq" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WIE-5U-UVi">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.94117647058823528" green="0.5490196078431373" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="DINPro-Medium" family="DINPro" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="tjf-ac-m8V"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ixG-dY-u6b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-778" y="73"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="HomeViewController" customModule="ManaSamskruthi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D8k-di-RYl" customClass="TPKeyboardAvoidingScrollView">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppImage" translatesAutoresizingMaskIntoConstraints="NO" id="8x0-ln-IhU">
+                                        <rect key="frame" x="15" y="15" width="341" height="170"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="170" id="p0q-SJ-GEy"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lhf-lE-dgk">
+                                        <rect key="frame" x="44" y="235" width="287" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="6tG-x1-i3R"/>
+                                            <constraint firstAttribute="width" constant="287" id="Wcc-sM-87w"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="hHC-jR-knj"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oz3-rG-ZqU">
+                                        <rect key="frame" x="44" y="315" width="287" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="287" id="Lja-8U-Iwy"/>
+                                            <constraint firstAttribute="height" constant="45" id="WXD-hY-jiJ"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="x6i-aQ-NIh"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dnl-0L-GkT">
+                                        <rect key="frame" x="107.5" y="416" width="160" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="160" id="KXV-jp-GnU"/>
+                                            <constraint firstAttribute="height" constant="50" id="TC0-sW-Y3d"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="DINPro-Bold" family="DINPro" pointSize="18"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleColor" red="0.94117647059999998" green="0.54901960780000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.94117647059999998" green="0.54901960780000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnLoginClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z1L-OZ-j5s"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cpl-gy-qrr">
+                                        <rect key="frame" x="44" y="368" width="287" height="1"/>
+                                        <color key="backgroundColor" red="0.38431372549019605" green="0.38431372549019605" blue="0.38431372549019605" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="GXM-Ys-78Z"/>
+                                            <constraint firstAttribute="width" constant="287" id="Nhk-3g-rQa"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0hN-IN-HW8">
+                                        <rect key="frame" x="44" y="282" width="287" height="1"/>
+                                        <color key="backgroundColor" red="0.38431372549999998" green="0.38431372549999998" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="Wo3-9C-QoL"/>
+                                            <constraint firstAttribute="width" constant="287" id="cPZ-9V-9gR"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="oz3-rG-ZqU" firstAttribute="top" secondItem="lhf-lE-dgk" secondAttribute="bottom" constant="35" id="5PX-8P-APn"/>
+                                    <constraint firstItem="8x0-ln-IhU" firstAttribute="top" secondItem="D8k-di-RYl" secondAttribute="top" constant="15" id="7jC-a1-I6c"/>
+                                    <constraint firstItem="lhf-lE-dgk" firstAttribute="centerX" secondItem="D8k-di-RYl" secondAttribute="centerX" id="83a-D7-abO"/>
+                                    <constraint firstItem="8x0-ln-IhU" firstAttribute="leading" secondItem="D8k-di-RYl" secondAttribute="leading" constant="15" id="AC9-jB-MOv"/>
+                                    <constraint firstAttribute="bottom" secondItem="Dnl-0L-GkT" secondAttribute="bottom" constant="137" id="PGE-Ju-QPq"/>
+                                    <constraint firstItem="Cpl-gy-qrr" firstAttribute="centerX" secondItem="D8k-di-RYl" secondAttribute="centerX" id="TIB-H4-UUg"/>
+                                    <constraint firstItem="Dnl-0L-GkT" firstAttribute="centerX" secondItem="D8k-di-RYl" secondAttribute="centerX" id="TIZ-Rm-njd"/>
+                                    <constraint firstItem="0hN-IN-HW8" firstAttribute="centerX" secondItem="D8k-di-RYl" secondAttribute="centerX" id="W5u-1Q-fEc"/>
+                                    <constraint firstItem="lhf-lE-dgk" firstAttribute="top" secondItem="8x0-ln-IhU" secondAttribute="bottom" constant="50" id="iN8-EO-iHd"/>
+                                    <constraint firstItem="Dnl-0L-GkT" firstAttribute="top" secondItem="oz3-rG-ZqU" secondAttribute="bottom" constant="56" id="k8G-Ee-qhv"/>
+                                    <constraint firstItem="0hN-IN-HW8" firstAttribute="top" secondItem="lhf-lE-dgk" secondAttribute="bottom" constant="2" id="t8s-hZ-YXW"/>
+                                    <constraint firstItem="Cpl-gy-qrr" firstAttribute="top" secondItem="oz3-rG-ZqU" secondAttribute="bottom" constant="8" id="xyB-sf-6UR"/>
+                                    <constraint firstAttribute="trailing" secondItem="8x0-ln-IhU" secondAttribute="trailing" constant="15" id="yY0-gV-exN"/>
+                                    <constraint firstItem="oz3-rG-ZqU" firstAttribute="centerX" secondItem="D8k-di-RYl" secondAttribute="centerX" id="zgz-tL-Zv3"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="D8k-di-RYl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="31B-9g-nLA"/>
+                            <constraint firstAttribute="trailing" secondItem="D8k-di-RYl" secondAttribute="trailing" id="WJL-Td-4ye"/>
+                            <constraint firstAttribute="bottom" secondItem="D8k-di-RYl" secondAttribute="bottom" id="kEs-Dl-QIg"/>
+                            <constraint firstItem="D8k-di-RYl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="muO-Ku-hFW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Login" id="ve6-uq-cRU"/>
+                    <connections>
+                        <outlet property="btnLogin" destination="Dnl-0L-GkT" id="kXu-Ac-JIa"/>
+                        <outlet property="txtfldEmail" destination="lhf-lE-dgk" id="ldZ-Ee-Ebn"/>
+                        <outlet property="txtfldPassword" destination="oz3-rG-ZqU" id="Oib-rG-rDp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="69.599999999999994" y="73.313343328335833"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="yoO-H3-Go3">
+            <objects>
+                <viewController storyboardIdentifier="ResultViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UIJ-nk-1oo" customClass="ResultViewController" customModule="ManaSamskruthi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Vg-14-ntL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G2C-h4-tVL">
+                                <rect key="frame" x="102" y="57" width="170" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="XBE-nd-eOw"/>
+                                    <constraint firstAttribute="height" constant="170" id="jZ3-EZ-Ra2"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" text="Manjeera Majestic Commercial, 8th floor, 818 B, Kphb Colony.Opp Jntu,,Kukatpally, Hyderabad, Telangana 500072" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0PS-44-dxs">
+                                <rect key="frame" x="49" y="237" width="277" height="310"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="277" id="7Z5-5z-aDt"/>
+                                    <constraint firstAttribute="height" constant="310" id="bf0-Lv-hXb"/>
+                                </constraints>
+                                <color key="textColor" red="0.3411764705882353" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="DINPro-Medium" family="DINPro" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="G2C-h4-tVL" firstAttribute="top" secondItem="EK7-0b-G5D" secondAttribute="top" constant="37" id="4Ph-TM-QTx"/>
+                            <constraint firstItem="0PS-44-dxs" firstAttribute="centerX" secondItem="8Vg-14-ntL" secondAttribute="centerX" id="jcy-IN-FW9"/>
+                            <constraint firstItem="0PS-44-dxs" firstAttribute="top" secondItem="G2C-h4-tVL" secondAttribute="bottom" constant="10" id="sQz-eZ-AGg"/>
+                            <constraint firstItem="G2C-h4-tVL" firstAttribute="centerX" secondItem="8Vg-14-ntL" secondAttribute="centerX" id="yZr-Ff-xYB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EK7-0b-G5D"/>
+                    </view>
+                    <connections>
+                        <outlet property="imgView" destination="G2C-h4-tVL" id="UrX-LL-4YK"/>
+                        <outlet property="txtResultnews" destination="0PS-44-dxs" id="xRV-Tj-pUK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5c9-47-246" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="71.200000000000003" y="849.62518740629696"/>
+        </scene>
+        <!--ScanQrCode-->
+        <scene sceneID="BC9-qg-l7m">
+            <objects>
+                <viewController storyboardIdentifier="HomeNextViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YDb-l0-3my" customClass="HomeNextViewController" customModule="ManaSamskruthi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8l4-eR-mYb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8r-Qc-Xlc">
+                                <rect key="frame" x="104" y="308" width="167" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="167" id="iMk-8a-3tr"/>
+                                    <constraint firstAttribute="height" constant="50" id="kUS-79-9s3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DINPro-Bold" family="DINPro" pointSize="25"/>
+                                <state key="normal" title="Attendance">
+                                    <color key="titleColor" red="0.94117647059999998" green="0.54901960780000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.94117647059999998" green="0.54901960780000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="EoR-OY-kuf" kind="show" id="6qY-A5-dej"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Qt-cu-1h8">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" red="0.94117647059999998" green="0.54901960780000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Iwz-cx-0GQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DINPro-Medium" family="DINPro" pointSize="23"/>
+                                <state key="normal" title="LOGOUT"/>
+                                <connections>
+                                    <action selector="btnLogoutClicked:" destination="YDb-l0-3my" eventType="touchUpInside" id="Iqq-Qd-51k"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="https://manasamskriti.org" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlL-An-7O6">
+                                <rect key="frame" x="86" y="575" width="203" height="22"/>
+                                <fontDescription key="fontDescription" name="DINPro-Medium" family="DINPro" pointSize="17"/>
+                                <color key="textColor" red="0.14399779190000001" green="0.2427932257" blue="0.92544642860000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWY-RN-fB1">
+                                <rect key="frame" x="74" y="560" width="226" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="226" id="jrb-aW-L9g"/>
+                                    <constraint firstAttribute="height" constant="57" id="kHI-Vg-CaL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DINPro-Medium" family="DINPro" pointSize="18"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.14399779186077102" green="0.24279322573452236" blue="0.92544642857142856" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLinkClicked:" destination="YDb-l0-3my" eventType="touchUpInside" id="FXa-V4-Bfk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click here to register :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JwX-Vg-m8n">
+                                <rect key="frame" x="102.5" y="538" width="170" height="22"/>
+                                <fontDescription key="fontDescription" name="DINPro-Medium" family="DINPro" pointSize="17"/>
+                                <color key="textColor" red="0.78865802289999998" green="0.20775431129999999" blue="0.16042975579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="FWY-RN-fB1" firstAttribute="top" secondItem="JwX-Vg-m8n" secondAttribute="bottom" id="2ms-9D-erN"/>
+                            <constraint firstItem="6Qt-cu-1h8" firstAttribute="trailing" secondItem="PKB-lC-i8j" secondAttribute="trailing" id="3nJ-d7-f0x"/>
+                            <constraint firstItem="B8r-Qc-Xlc" firstAttribute="centerX" secondItem="8l4-eR-mYb" secondAttribute="centerX" id="4VM-sP-gSq"/>
+                            <constraint firstItem="6Qt-cu-1h8" firstAttribute="bottom" secondItem="PKB-lC-i8j" secondAttribute="bottom" id="FFq-xf-lfZ"/>
+                            <constraint firstItem="FWY-RN-fB1" firstAttribute="centerX" secondItem="8l4-eR-mYb" secondAttribute="centerX" id="GEE-z6-IVN"/>
+                            <constraint firstItem="6Qt-cu-1h8" firstAttribute="top" secondItem="FWY-RN-fB1" secondAttribute="bottom" id="QvF-0E-yC9"/>
+                            <constraint firstItem="B8r-Qc-Xlc" firstAttribute="centerY" secondItem="8l4-eR-mYb" secondAttribute="centerY" id="UWa-DY-838"/>
+                            <constraint firstItem="6Qt-cu-1h8" firstAttribute="top" secondItem="hlL-An-7O6" secondAttribute="bottom" constant="20" id="do5-bO-xfD"/>
+                            <constraint firstItem="hlL-An-7O6" firstAttribute="centerX" secondItem="8l4-eR-mYb" secondAttribute="centerX" id="fdI-ur-dzt"/>
+                            <constraint firstItem="6Qt-cu-1h8" firstAttribute="leading" secondItem="PKB-lC-i8j" secondAttribute="leading" id="tTV-cw-9kJ"/>
+                            <constraint firstItem="JwX-Vg-m8n" firstAttribute="centerX" secondItem="8l4-eR-mYb" secondAttribute="centerX" id="xQ2-US-VxP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PKB-lC-i8j"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="ScanQrCode" id="V7N-Pm-4sd">
+                        <barButtonItem key="leftBarButtonItem" id="3Bg-3i-LXb">
+                            <color key="tintColor" red="0.92156862750000001" green="0.14901960780000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="btnLink" destination="FWY-RN-fB1" id="iWc-SB-ODo"/>
+                        <outlet property="btnLogOut" destination="6Qt-cu-1h8" id="vYM-A1-fLR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="waY-PP-Jaw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="784.79999999999995" y="67.916041979010501"/>
+        </scene>
+        <!--Qr Scan Code View Controller-->
+        <scene sceneID="OD2-6Y-llO">
+            <objects>
+                <viewController storyboardIdentifier="QrScanCodeViewController" id="EoR-OY-kuf" customClass="QrScanCodeViewController" customModule="ManaSamskruthi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rd4-XL-hcO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="0LI-Sj-dC3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P45-7U-nRE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1592.8" y="67.916041979010501"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AppImage" width="341" height="166"/>
+    </resources>
+</document>
