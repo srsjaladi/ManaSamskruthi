@@ -56,13 +56,14 @@ class ManaSamskruthiAPI {
         handler: @escaping (_ success: Bool, _ response: AnyObject?) -> Void
         )
     {
-        let parameters: [String: String] = [
-            "email": "info@akinfopark.com",
-            "password": "demo123"
+        let parameters: [String: Any] = [
+            "email": "sriksatya@outlook.com",
+            "password": "admin@2018"
         ]
         
-         let path: String = "http://easemypay.in/travel_packages/webservices/login.php"
-        self.alamoFireManager.request(path, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil).validate(statusCode: 200..<600).responseJSON { response in
+         let path: String = "https://manasamskriti.org/webservices/login.php"
+             self.alamoFireManager.request(path, method:.post, parameters: parameters, encoding: JSONEncoding.default,headers: nil).validate(statusCode: 200..<600).responseJSON { response in
+            
                 
                 let success = self.validateResponseSuccess(response)
                 
@@ -90,12 +91,12 @@ class ManaSamskruthiAPI {
         handler: @escaping (_ success: Bool, _ name: String?, _ response: String?) -> Void
         )
     {
-        let parameters: [String: String] = [
+        let parameters: [String: Any] = [
             "QR_code": code
         ]
         
-        let path: String = "http://rainiersoft.com/clients/manasamskriti-new/webservices/qrcode.php"
-        self.alamoFireManager.request(path, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil).validate(statusCode: 200..<600).responseJSON { response in
+        let path: String = "https://manasamskriti.org/webservices/qrcode.php"
+        self.alamoFireManager.request(path, method: .post, parameters: parameters, encoding: URLEncoding.httpBody, headers: nil).validate(statusCode: 200..<600).responseJSON { response in
             
             let success = self.validateResponseSuccess(response)
             
