@@ -57,8 +57,8 @@ class ManaSamskruthiAPI {
         )
     {
         let parameters: [String: Any] = [
-            "email": "sriksatya@outlook.com",
-            "password": "admin@2018"
+            "email": email,
+            "password": password
         ]
         
          let path: String = "https://manasamskriti.org/webservices/login.php"
@@ -96,7 +96,7 @@ class ManaSamskruthiAPI {
         ]
         
         let path: String = "https://manasamskriti.org/webservices/qrcode.php"
-        self.alamoFireManager.request(path, method: .post, parameters: parameters, encoding: URLEncoding.httpBody, headers: nil).validate(statusCode: 200..<600).responseJSON { response in
+        self.alamoFireManager.request(path, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil).validate(statusCode: 200..<600).responseJSON { response in
             
             let success = self.validateResponseSuccess(response)
             
